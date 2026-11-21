@@ -4,7 +4,7 @@ A simple, interactive date calculator tool that lets you compute the number of d
 
 ## 🚀 Live Demo
 
-Check out the live demo: [https://www.sieu.io.vn/github/counting-date](https://www.sieu.io.vn/github/counting-date)
+Check out the live demo: [https://sieu.io.vn/github/counting-date](https://sieu.io.vn/github/counting-date)
 
 ## ✨ Features
 
@@ -14,6 +14,7 @@ Check out the live demo: [https://www.sieu.io.vn/github/counting-date](https://w
 - **Reset Each Field** – Clear individual input fields with the "Reset" button next to each
 - **Dark Theme** – Modern, GitHub-inspired dark interface for comfortable use
 - **Responsive Design** – Works seamlessly on desktop, tablet, and mobile devices
+- **Multi-language Support (VI/EN/JA):** Fully localized in Vietnamese, English, and Japanese with instant, reload-free switching, persistent user preferences (`localStorage`), and embedded translation dictionaries for maximum performance.
 
 ## 🛠️ Technologies Used
 
@@ -65,6 +66,25 @@ Contributions are welcome! Feel free to submit a Pull Request or open an Issue.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### 🛠️ For Developers (How to add/edit translations)
+To add a new language or modify existing text:
+1. Open the `script.js` file.
+2. Locate the `DEFAULT_TRANSLATIONS` object.
+3. Add a new language key (e.g., `fr` for French) and provide the translations for all keys. 
+   *Example:*
+   ```javascript
+   const DEFAULT_TRANSLATIONS = {
+     vi: { /* ... */ },
+     en: { /* ... */ },
+     ja: { /* ... */ },
+     // Add new language here:
+     fr: {
+       page_title: "Quiz sur les identités algébriques",
+       // ... other keys
+     }
+   };
+   ```
 
 ## 📄 License
 This project is open-source and available under the MIT License.
