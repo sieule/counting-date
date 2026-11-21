@@ -9,25 +9,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Nút về trang chủ -->
+    <a href="/" class="home-btn" title="Home">
+        <span aria-hidden="true">🏠</span>
+        <span data-i18n="button_home">Về trang chủ</span>
+    </a>
+
+    <div class="lang-selector">
+        <label for="langSelect" data-i18n="lang_label">Ngôn ngữ</label>
+        <select id="langSelect">
+            <option value="vi">Tiếng Việt</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>Đếm Ngày</h1>
+        <h1 data-i18n="heading">Đếm Ngày</h1>
         <div class="form-group">
-            <label for="startDate">Ngày bắt đầu:</label></br>
+            <label for="startDate" data-i18n="label_startDate">Ngày bắt đầu:</label></br>
             <input type="date" id="startDate">
-            <button onclick="resetField('startDate')">Đặt lại</button>
+            <button data-reset="startDate" data-i18n="button_reset">Đặt lại</button>
         </div>
         <div class="form-group">
-            <label for="endDate">Ngày kết thúc:</label></br>
+            <label for="endDate" data-i18n="label_endDate">Ngày kết thúc:</label></br>
             <input type="date" id="endDate">
-            <button onclick="resetField('endDate')">Đặt lại</button>
+            <button data-reset="endDate" data-i18n="button_reset">Đặt lại</button>
         </div>
         <div class="form-group">
-            <label for="daysCount">Số ngày:</label></br>
+            <label for="daysCount" data-i18n="label_daysCount">Số ngày:</label></br>
             <input type="number" id="daysCount">
-            <button onclick="resetField('daysCount')">Đặt lại</button>
+            <button data-reset="daysCount" data-i18n="button_reset">Đặt lại</button>
         </div>
-        <button onclick="calculateDays()">Tính</button>
-        <input type="text" id="result" placeholder="Kết quả sẽ hiển thị ở đây" readonly>
+        <button id="calcButton" data-i18n="button_calculate">Tính</button>
+        <input type="text" id="result" data-i18n-placeholder="placeholder_result"
+               placeholder="Kết quả sẽ hiển thị ở đây" readonly>
     </div>
     <script src="script.js"></script>
 </body>
